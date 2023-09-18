@@ -9,27 +9,26 @@ def compute_numeric_solutions(u, w, o, t):
 
 
 def sim_data(count=100):
-    µ = []
+    y = []
     c = []
     O = []
     Px = []
     Pt = []
 
     for _ in range(0, count):
-        u = rd.randint(1, 2)/100
-        w = rd.randint(1, 2)/100
-        o = rd.randint(1, 2)/100
-        t = rd.randint(1, 2)/100
+        u = rd.randint(1, 2) / 100
+        w = rd.randint(1, 2) / 100
+        o = rd.randint(1, 2) / 100
+        t = rd.randint(1, 2) / 100
 
-        µ.append(u)
+        y.append(u)
         c.append(w)
         O.append(o)
         Pt.append(t)
         Px.append(compute_numeric_solutions(u, w, o, t))
 
-
     return {
-        "µ": µ,
+        "µ": y,
         "c": c,
         "∅": O,
         "∂P/∂x": Px,
@@ -64,15 +63,3 @@ for i in range(0, 100):
     opt.apply_gradients(zip(gradients, model.trainable_variables))
 
 print(loss)
-
-
-
-
-
-
-
-
-
-
-
-
