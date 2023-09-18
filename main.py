@@ -27,7 +27,5 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(units=10000),
     tf.keras.layers.Dense(units=1)
 ])
-y = 0
-predicted = 0
 
 mse_loss = tf.keras.losses.MSE(data["∂P/∂x"], data[""])
