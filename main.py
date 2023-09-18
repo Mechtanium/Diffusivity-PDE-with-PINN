@@ -1,9 +1,10 @@
 import pandas as pd
 import tensorflow as tf
 import numpy as np
+import random as rd
 
 
-def compute_numeric_solutions():
+def compute_numeric_solutions(u, w, o, t):
     pass
 
 
@@ -14,15 +15,18 @@ def sim_data(count=100):
     Px = []
     Pt = []
 
-    for c in range(0, count):
-        µ.append()
-        c
-        O
-        Px
-        Pt
-        pass
-        # get randomvalues for params
-        # solve for dP/dx
+    for _ in range(0, count):
+        u = rd.randint(1, 2)/100
+        w = rd.randint(1, 2)/100
+        o = rd.randint(1, 2)/100
+        t = rd.randint(1, 2)/100
+
+        µ.append(u)
+        c.append(w)
+        O.append(o)
+        Pt.append(t)
+        Px.append(compute_numeric_solutions(u, w, o, t))
+
 
     return {
         "µ": µ,
